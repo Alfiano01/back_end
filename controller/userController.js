@@ -36,10 +36,11 @@ const login = async(req, res, next) => {
                 // 10. Generate token menggunakan jwt sign
                 let jwtSecretKey = process.env.SECRET;
                 let data = {
-                    id: user.rows[0].id,
-                    username: user.rows[0].username,
-                    email:user.rows[0].email,
-                    password:user.rows[0].password
+                    user
+//                     id: user.rows[0].id,
+//                     username: user.rows[0].username,
+//                     email:user.rows[0].email,
+//                     password:user.rows[0].password
                 }
                 const token = jwt.sign(data, jwtSecretKey);
                 
