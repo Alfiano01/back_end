@@ -7,6 +7,7 @@ require("dotenv").config();
 const bcrypt = require('bcrypt');
 SECRET = process.env.SECRET;
 
+// reza
 
 const register = async(req, res, next) => {
     const{username,email,password}= req.body;
